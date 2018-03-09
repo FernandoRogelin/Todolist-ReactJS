@@ -3,3 +3,40 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.title{
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 35px;
+}
+
+.todo-list{
+  background-color: #ff6666;
+  width: 500px;
+  margin-left: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 190px;
+  margin-top: 21px;
+  box-shadow: 15px 15px #e8e2e2 inset;
+}
+
+.todo-item input{
+  height: 30px;
+  width: 200px;
+  outline: none;
+  padding-left: 15px;
+}
+
+.todo-item button{
+  height: 34px;
+  cursor: pointer;
+}
+
+.addItem{
+  margin-left: 3px;
+  color: #fff;
+  background-color: #ff6666;
+  border: 1px solid #fff;
+}
