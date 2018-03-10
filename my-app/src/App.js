@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AddItem from './addItemComponent';
 import './App.css';
 
 class todoList extends Component {
@@ -8,10 +9,7 @@ class todoList extends Component {
         <div>
           <p className="title">Todo-List with ReactJS</p>
         </div>
-        <div className="todo-item">
-          <input type="text"></input>
-          <button className="addItem">Add Item</button>
-        </div>
+        <AddItem />
       </div>
     );
   }

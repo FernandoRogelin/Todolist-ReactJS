@@ -10,10 +10,14 @@ body {
   font-size: 35px;
 }
 
+#root{
+  display: flex;
+  justify-content: center;
+}
+
 .todo-list{
   background-color: #ff6666;
   width: 500px;
-  margin-left: 500px;
   display: flex;
   align-items: center;
   flex-direction: column;
