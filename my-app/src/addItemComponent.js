@@ -3,16 +3,17 @@ import React, { Component } from 'react';
 export default class addItem extends Component {
   constructor(){
     super();
+    this.palavras = []
     this.state = {
-      palavras: [],
       texto: '',
       cont: 0
     }
   }
 
   onClicou = () => {
+    this.palavras[this.state.cont] = this.state.texto;
+    console.log(this.palavras);
     this.setState({
-      palavras: this.state.palavras[this.state.cont] = this.state.texto,
       cont: this.state.cont + 1
     });
   }
@@ -22,7 +23,7 @@ export default class addItem extends Component {
       <div className="todo-item">
         <input onInput={(e) => this.setState({texto: e.target.value})} name="text" type="text"></input>
         <button className="addItem" onClick={this.onClicou}>Add Item</button>
-        <div>{this.state.palavras}</div>
+        <div className="itens">{this.palavras}</div>
       </div>
     );
   }

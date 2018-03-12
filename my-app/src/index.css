@@ -26,6 +26,11 @@ body {
   box-shadow: 15px 15px #e8e2e2 inset;
 }
 
+.itens{
+  color: #fff;
+  margin-top: 8px;
+}
+
 .todo-item input{
   height: 30px;
   width: 200px;
