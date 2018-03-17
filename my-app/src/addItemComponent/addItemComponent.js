@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './addItem.css';
 
 export default class addItem extends Component {
   constructor() {
@@ -11,11 +12,23 @@ export default class addItem extends Component {
   }
 
   onClicou = () => {
-    this.palavras[this.state.cont] = <div>{this.state.texto}</div>;
-    console.log(this.palavras);
+    this.palavras[this.state.cont] = 
+    <div className="list">{this.state.texto}
+      <button onClick={this.onExcluir} className="excluir">X</button>
+    </div>;
+    
     this.setState({
       cont: this.state.cont + 1
     });
+  };
+
+  onExcluir = (e) => {
+    let array = this.palavras;
+    let index = array.indexOf(e.target.value);
+    // console.log(oi);
+    console.log(e.target.value);
+    array.splice(index, 1);
+    this.setState({palavras: array});
   };
 
   render() {
