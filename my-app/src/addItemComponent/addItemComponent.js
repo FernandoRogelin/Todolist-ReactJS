@@ -10,21 +10,22 @@ export default class addItem extends Component {
     };
   }
 
-  Clicou = () => {
-    console.log(this.state.texto);
-    this.setState({
-      palavras: this.state.palavras.push(this.state.texto)
-    });
+  click = () => {
+    this.state.palavras.push(this.state.texto);
   };
 
   render() {
+    const listItems = this.state.palavras.map(frases => (
+      <div className="itens">{frases}</div>
+    ));
+
     return (
       <div className="todo-item">
         <input onInput={e => this.setState({ texto: e.target.value })} />
-        <button className="addItem" onClick={this.Clicou}>
+        <button className="addItem" onClick={this.click}>
           Add Item
         </button>
-        <div className="itens" />
+        {listItems}
       </div>
     );
   }
