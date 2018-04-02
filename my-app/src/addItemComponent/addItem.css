@@ -1,6 +1,8 @@
 .itens{
     color: #fff;
     margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
 }
   
 .todo-item input{
@@ -8,6 +10,14 @@
     width: 200px;
     outline: none;
     padding-left: 15px;
+}
+
+.excluir{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
 }
 
 .addItem{

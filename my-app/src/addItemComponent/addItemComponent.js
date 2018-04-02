@@ -16,7 +16,10 @@ export default class addItem extends Component {
 
   render() {
     const listItems = this.state.palavras.map(frases => (
-      <div className="itens">{frases}</div>
+      <div className="itens">
+        {frases}
+        <button className="excluir">X</button>
+      </div>
     ));
 
     return (
