@@ -18,18 +18,19 @@ export default class addItem extends Component {
     this.state.texto = evt.target.value;
   };
 
-  removePeople = evt => {
-    var array = [...this.state.palavras];
-    var index = array.indexOf(evt.target.value);
-    array.splice(index, 1);
-    this.setState({ palavras: array });
+  onRemovePerson = index => {
+    this.setState(() => {
+      let newArray = [...this.state.palavras]
+      newArray.splice(index, 1)
+      return { palavras: newArray }
+    })
   };
 
   render() {
     const listItems = this.state.palavras.map(frases => (
       <Itens>
         {frases}
-        <Excluir onClick={this.removePeople}>X</Excluir>
+        <Excluir onClick={this.onRemovePerson}>X</Excluir>
       </Itens>
     ));
 
