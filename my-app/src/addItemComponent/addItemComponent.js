@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "./addItem.css";
+
+import { TodoItem, AdicionaItem, Itens, Excluir } from './styles'
 
 export default class addItem extends Component {
   state = {
@@ -26,18 +27,18 @@ export default class addItem extends Component {
 
   render() {
     const listItems = this.state.palavras.map(frases => (
-      <div className="itens">
+      <Itens>
         {frases}
-        <button className="excluir" onClick={this.removePeople}>X</button>
-      </div>
+        <Excluir onClick={this.removePeople}>X</Excluir>
+      </Itens>
     ));
 
     return (
-      <div className="todo-item">
-        <input onChange={this.onChangeText} />
-        <button className="addItem" onClick={this.AddItem}>
+      <div>
+        <TodoItem onChange={this.onChangeText} />
+        <AdicionaItem onClick={this.AddItem}>
           Add Item
-        </button>
+        </AdicionaItem>
         {listItems}
       </div>
     );

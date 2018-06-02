@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import AddItem from './addItemComponent/addItemComponent';
-import './App.css';
+
+import { Title, TodoList, Root } from './styles.js';
 
 class todoList extends Component {
   render() {
     return (
-      <div className="todo-list">
-        <div>
-          <p className="title">Todo-List with ReactJS</p>
-        </div>
-        <AddItem />
-      </div>
+      <Root>
+        <TodoList>
+          <div>
+            <Title>Todo-List with ReactJS</Title>
+          </div>
+          <AddItem />
+        </TodoList>
+      </Root>
     );
   }
 }
